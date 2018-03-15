@@ -4,13 +4,13 @@ The Databox Docker container that manages the flow of data by minting tokens and
 
 If you are a Databox app or driver developer, skip to [the relevant API documentation](#container-facing).
 
-Further background info for Databox platform [here](https://github.com/me-box/databox).
+Further background info for Databox platform [here](https://github.com/tsh2/databox).
 
 
 For debug purposes:
 
 ## Installation
-	git clone https://github.com/me-box/core-arbiter.git
+	git clone https://github.com/tsh2/core-arbiter.git
 	cd core-arbiter
 	npm install
 
@@ -108,7 +108,7 @@ Adds permissions to the record of containers maintained by the arbiter for a par
 
 Routes are encoded into tokens (as macaroon caveats). Routes are made up of a target container, an API path, and an HTTP method. The arbiter is indifferent to methods, but for the majority of APIs, `GET` requests map to read operations, and `POST` requests map to write operations.
 
-Paths are JSON-formatted whitelists of accessible endpoints formatted as defined [here](https://github.com/pillarjs/path-to-regexp#parameters) and are testable [here](http://forbeslindesay.github.io/express-route-tester/). More information [here](https://github.com/me-box/admin/blob/master/specs/token-auth.md#path--datasourceapi). The arbiter will mint tokens to paths (exact or RegExp) that match granted path permissions following those RegExp rules.
+Paths are JSON-formatted whitelists of accessible endpoints formatted as defined [here](https://github.com/pillarjs/path-to-regexp#parameters) and are testable [here](http://forbeslindesay.github.io/express-route-tester/). More information [here](https://github.com/tsh2/admin/blob/master/specs/token-auth.md#path--datasourceapi). The arbiter will mint tokens to paths (exact or RegExp) that match granted path permissions following those RegExp rules.
 
 NB: CM arbiter key MUST be provided as per the [Hypercat 3.0 specs](http://shop.bsigroup.com/upload/276605/PAS212-corr.pdf). The arbiter will not accept requests that don't include a key that matches that passed to it in the `CM_KEY` environment variable on launch.
 
@@ -119,7 +119,7 @@ NB: CM arbiter key MUST be provided as per the [Hypercat 3.0 specs](http://shop.
     - target: Target container hostname
     - path:   API path
     - method: HTTP method
-  - caveats: String array of route-specific caveats (all optional, see [here](https://github.com/me-box/admin/blob/master/specs/token-auth.md) for explanations).
+  - caveats: String array of route-specific caveats (all optional, see [here](https://github.com/tsh2/admin/blob/master/specs/token-auth.md) for explanations).
 
 ##### Response
 

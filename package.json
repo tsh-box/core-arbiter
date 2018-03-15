@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/me-box/databox-arbiter.git"
+    "url": "git+https://github.com/tsh2/databox-arbiter.git"
   },
   "keywords": [
     "docker",
@@ -34,9 +34,9 @@
   "author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/me-box/databox-arbiter/issues"
+    "url": "https://github.com/tsh2/databox-arbiter/issues"
   },
-  "homepage": "https://github.com/me-box/databox-arbiter#readme",
+  "homepage": "https://github.com/tsh2/databox-arbiter#readme",
   "dependencies": {
     "basic-auth": "^1.1.0",
     "body-parser": "^1.14.2",
